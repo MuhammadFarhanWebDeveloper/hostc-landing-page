@@ -1,7 +1,9 @@
+"use client";
 import { CheckCircle, SquareCheckBig } from "lucide-react";
 import Title from "./Title";
 import Image from "next/image";
 import AnimatedBlob from "./AnimatedBlob";
+import { useBreathing } from "./useBreathing";
 
 const features = [
   "100% Uptime Guarantee",
@@ -10,10 +12,16 @@ const features = [
   "Free Site Migration",
 ];
 export default function Features() {
+  useBreathing({
+    heroSelector: ".feature-image",
+    shapesSelector: ".feature-shape",
+    distance: 40,
+    duration: 2,
+  });
   return (
-    <section className="relative overflow-hidden ">
+    <section className="relative overflow-hidden px-2 ">
       <div className="container mx-auto py-10  flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-6">
-        <div className="w-full flex flex-col gap-6">
+        <div className="w-full flex flex-col gap-6 " id="left">
           <Title text="Our Features" />
           <h1 className="h2">
             HOSTC Security <br /> Features
@@ -45,19 +53,19 @@ export default function Features() {
             height={500}
             src={"/images/features1-image.png"}
             alt="Feature Image"
-            className="z-10"
+            className="feature-image animate-from-right z-10"
           />
           <AnimatedBlob
-            width={400}
-            height={400}
-            className="text-primary/20 absolute inset-0 w-full h-full"
+            width={500}
+            height={500}
+            className="text-primary/20 mx-auto absolute inset-0 lg:w-[550px] w-full h-full lg:h-[550px]"
           />
           <Image
             width={300}
             height={300}
             src={"/images/features1-shape2.png"}
             alt="Shape"
-            className="absolute top-8 -right-20 z-0 w-[460px] "
+            className="feature-shape absolute top-8 -right-20 z-0 w-[460px] "
           />
         </div>
       </div>

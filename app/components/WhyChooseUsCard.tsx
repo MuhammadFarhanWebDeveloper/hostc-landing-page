@@ -23,7 +23,7 @@ export default function WhyChooseUsCard(props: Props) {
         )}
       </div>
       <div>
-        <h2 className="h6 capitalize">{props.title}</h2>
+        <h2 className="h5 capitalize">{props.title}</h2>
       </div>
       <div>
         <p>{props.desc}</p>

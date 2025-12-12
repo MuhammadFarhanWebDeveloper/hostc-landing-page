@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
     >
       <div className="grid md:grid-cols-2  grid-cols-1 lg:grid-cols-3 gap-4 container/10 mx-auto">
         {data.map((item, index) => (
-          <div key={index}>
+          <div className="animated-card" key={index}>
             <WhyChooseUsCard showArrow={index !== data.length - 1} {...item} />
           </div>
         ))}
