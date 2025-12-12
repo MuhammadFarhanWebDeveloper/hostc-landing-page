@@ -2,7 +2,6 @@
 
 import { SplitText } from "gsap/SplitText";
 import CTA from "./components/CTA";
-import DataCenters from "./components/DataCenters";
 import Features from "./components/Features";
 import FindDomain from "./components/FindDomain";
 import Footer from "./components/Footer";
